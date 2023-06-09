@@ -2,6 +2,9 @@ name: Whatsapp-Bot-Jawir
 
 services:
   - name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: hakimfrh/Whatsapp-bot-Jawir:latest
 
 volumes:
