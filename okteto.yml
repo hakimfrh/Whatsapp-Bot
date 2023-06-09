@@ -3,7 +3,7 @@ image: dockerhubusername/myapp:latest # Replace with your Docker image name
 
 # Define your application's services
 services:
-  app:
+  - name: app
     build: .
     # Add additional services if needed
 
