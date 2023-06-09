@@ -3,8 +3,6 @@ name: Whatsapp-Bot-Jawir
 services:
   - name: app
     image: hakimfrh/Whatsapp-bot-Jawir:latest
-    build: .
-    # Add additional services if needed
 
 volumes:
   - name: data
