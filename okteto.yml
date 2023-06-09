@@ -1,21 +1,15 @@
 name: Whatsapp-Bot-Jawir
-image: /Dockerfile # Replace with your Docker image name
+image: hakimfrh/Whatsapp-bot-Jawir:latest
 
-# Define your application's services
 services:
-  - name: app
+  app:
     build: .
     # Add additional services if needed
 
-# Define your application's volumes
 volumes:
   - name: data
-    mountPath: /app/data # Replace with your desired mount path
+    mountPath: /app/data
 
-# Define your application's environment variables
 environment:
   - NODE_ENV=production
   # Add additional environment variables if needed
-
-# Define any additional configurations, like ports, commands, etc.
-# See the Okteto documentation for available options
