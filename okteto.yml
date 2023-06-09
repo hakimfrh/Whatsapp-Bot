@@ -6,10 +6,10 @@ services:
     build: .
     # Add additional services if needed
 
-volumes:
-  - name: data
-    mountPath: /app/data
+    volumes:
+      - name: data
+        mountPath: /app/data
 
-environment:
-  - NODE_ENV=production
-  # Add additional environment variables if needed
+    environment:
+      - NODE_ENV=production
+      # Add additional environment variables if needed
