@@ -1,7 +1,7 @@
 name: Whatsapp-Bot-Jawir
 
 services:
-  - name: Whatsapp-Bot-Jawir
+  - name: app
     image: hakimfrh/Whatsapp-bot-Jawir:latest
     build: .
     # Add additional services if needed
