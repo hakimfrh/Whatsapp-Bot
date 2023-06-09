@@ -1,11 +1,11 @@
 name: Whatsapp-Bot-Jawir
-image: <Dockerfile> # Replace with your Docker image name
+image: <your-docker-image> # Replace with your Docker image name
 
 # Define your application's services
 services:
-  - name: app
-    image: <Dockerfile> # Replace with your Docker image name
-  # Add additional services if needed
+  app:
+    build: .
+    # Add additional services if needed
 
 # Define your application's volumes
 volumes:
@@ -14,8 +14,7 @@ volumes:
 
 # Define your application's environment variables
 environment:
-  - name: NODE_ENV
-    value: production
+  - NODE_ENV=production
   # Add additional environment variables if needed
 
 # Define any additional configurations, like ports, commands, etc.
