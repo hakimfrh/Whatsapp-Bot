@@ -631,8 +631,8 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
     Waiting @${room.game.currentTurn.split('@')[0]}
     
     Type *surrender* to surrender and admit defeat`
-            if (room.x !== room.o) await GojoMdNx.sendText(room.x, str, m, { mentions: parseMention(str) } )
-            await GojoMdNx.sendText(room.o, str, m, { mentions: parseMention(str) } )
+            if (room.x !== room.o) await Bot.sendText(room.x, str, m, { mentions: parseMention(str) } )
+            await Bot.sendText(room.o, str, m, { mentions: parseMention(str) } )
             } else {
             room = {
             id: 'tictactoe-' + (+new Date),
@@ -652,7 +652,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             try {
             if (this.game) {
             delete this.game
-            GojoMdNx.sendText(m.chat, `Successfully Deleted The TicTacToe Session`, m)
+            Bot.sendText(m.chat, `Successfully Deleted The TicTacToe Session`, m)
             } else if (!this.game) {
             reply(`TicTacToe🎮 Session Does Not Exist`)
             } else reply('?')
