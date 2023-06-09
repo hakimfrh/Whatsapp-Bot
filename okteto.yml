@@ -1,15 +1,15 @@
 name: Whatsapp-Bot-Jawir
-image: hakimfrh/Whatsapp-bot-Jawir:latest
 
 services:
-  - name: app
+  - name: Whatsapp-Bot-Jawir
+    image: hakimfrh/Whatsapp-bot-Jawir:latest
     build: .
     # Add additional services if needed
 
-volumes:
-  - name: data
-    mountPath: /app/data
+    volumes:
+      - name: data
+        mountPath: /app/data
 
-environment:
-  - NODE_ENV=production
-  # Add additional environment variables if needed
+    environment:
+      - NODE_ENV=production
+      # Add additional environment variables if needed
