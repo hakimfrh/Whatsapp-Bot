@@ -232,7 +232,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
             if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); Bot.logout();}
-            else if (reason === DisconnectReason.connectionClosed) { console.log("🐦Connection closed, reconnecting...."); startBot(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("🐦Connection closed, reconnecting...."); Bot.end(`🐦Connection closed: ${reason}|${connection}`); startBot(); }
             else if (reason === DisconnectReason.connectionLost) { console.log("🐦Connection Lost from Server, reconnecting..."); startBot(); }
             else if (reason === DisconnectReason.connectionReplaced) { console.log("🐦Connection Replaced, Another New Session Opened, Please Close Current Session First");Bot.logout();}
             else if (reason === DisconnectReason.loggedOut) { console.log(`🐦Device Logged Out, Please Scan Again And Run.`); Bot.logout();}
